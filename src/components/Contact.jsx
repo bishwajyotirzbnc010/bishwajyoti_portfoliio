@@ -1,8 +1,8 @@
-// src/components/Contact.jsx
+import React from 'react';
 const Contact = () => {
   return (
     <section id="contact" className="px-6 py-20 bg-gray-50">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
         <p className="mb-10 text-gray-700">Let’s create something amazing together. Drop me a message!</p>
         <form className="space-y-6">
@@ -22,7 +22,7 @@ const Contact = () => {
           />
           <button 
             type="submit" 
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+            className="bg-black text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
           >
             Send Message
           </button>

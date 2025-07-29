@@ -1,4 +1,4 @@
-// src/components/Experience.jsx
+import React from 'react';
 const Experience = () => {
   const experiences = [
     { year: "2023 - Present", role: "Lead Visual Artist", company: "IM Vision Studio" },
