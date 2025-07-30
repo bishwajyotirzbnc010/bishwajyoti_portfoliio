@@ -1,24 +1,57 @@
 import React from 'react';
 const Experience = () => {
-  const experiences = [
-    { year: "2023 - Present", role: "Lead Visual Artist", company: "IM Vision Studio" },
-    { year: "2021 - 2023", role: "Freelance Cinematographer", company: "Various Projects" },
-    { year: "2019 - 2021", role: "Photography Intern", company: "Creative Lens Nepal" },
-  ];
-
+  
   return (
     <section id="experience" className="px-6 py-20 bg-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center">Experience</h2>
-        <div className="space-y-6">
-          {experiences.map((exp, i) => (
-            <div key={i} className="p-6 border-l-4 border-blue-500 bg-gray-50 shadow-sm">
-              <h3 className="text-xl font-semibold">{exp.role}</h3>
-              <p className="text-gray-600">{exp.company}</p>
-              <span className="text-sm text-gray-500">{exp.year}</span>
-            </div>
-          ))}
-        </div>
+        <div className="overflow-hidden whitespace-nowrap w-full bg-transparent py-4 relative">
+  <div className="flex animate-scrollMarqueeL hover:[animation-play-state:paused]">
+    <span className="text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+      experience . experience . experience . experience .
+    </span>
+    <span className="text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+      experience . experience . experience . experience .
+    </span>
+  </div>
+</div>
+        <div className="max-w-[900px] mx-auto my-8 flex flex-col gap-12">
+  <div className="experience-item">
+    <h3 className="text-2xl font-Space_Grotesk mb-1.5">
+      Lead Cinematographer — I.M. Vision Studio
+    </h3>
+    <p className="text-sm text-gray-500 italic mb-4">
+      Biratnagar, Nepal · Jan 2021 – Present
+    </p>
+    <p className="text-base leading-7 text-gray-800">
+      Directed and shot over 200+ wedding and commercial projects. Delivered visually compelling stories by mastering camera composition, lighting design, and storytelling through motion.
+    </p>
+  </div>
+
+  <div className="experience-item">
+    <h3 className="text-2xl font-Space_Grotesk mb-1.5">
+      Freelance Filmmaker & Editor
+    </h3>
+    <p className="text-sm text-gray-500 italic mb-4">
+      Remote · Jun 2019 – Dec 2020
+    </p>
+    <p className="text-base leading-7 text-gray-800">
+      Worked with independent artists and production houses to shoot short films, product ads, and event videos. Managed entire post-production using Premiere Pro and DaVinci Resolve.
+    </p>
+  </div>
+
+  <div className="experience-item">
+    <h3 className="text-2xl font-Space_Grotesk mb-1.5">
+      Content Creator — Local Event Studios
+    </h3>
+    <p className="text-sm text-gray-500 italic mb-4">
+      Biratnagar, Nepal · 2018 – 2019
+    </p>
+    <p className="text-base leading-7 text-gray-800">
+      Collaborated with cultural and social event organizers to film, edit, and produce creative video reels. Gained hands-on experience with gimbal work, audio syncing, and multi-cam setups.
+    </p>
+  </div>
+</div>
+
       </div>
     </section>
   );
