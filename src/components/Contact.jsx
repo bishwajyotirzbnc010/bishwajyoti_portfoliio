@@ -2,7 +2,7 @@ import React from 'react';
 const Contact = () => {
   return (
     <section id="contact" className="px-6 py-20 bg-gray-50">
-      <div className="max-w-2xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         <div className="overflow-hidden whitespace-nowrap w-full bg-transparent py-4 relative">
   <div className="flex animate-scrollMarqueeR hover:[animation-play-state:paused]">
     <span className="text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
@@ -14,6 +14,7 @@ const Contact = () => {
   </div>
 </div>
         <p className="mb-10 text-gray-700">Let’s create something amazing together. Drop me a message!</p>
+        <div className="max-w-xl mx-auto text-center">
         <form className="space-y-6">
           <input 
             type="text" 
@@ -36,6 +37,7 @@ const Contact = () => {
             Send Message
           </button>
         </form>
+        </div>
       </div>
     </section>
   );

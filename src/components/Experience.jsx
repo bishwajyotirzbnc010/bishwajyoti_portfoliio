@@ -3,7 +3,7 @@ const Experience = () => {
   
   return (
     <section id="experience" className="px-6 py-20 bg-white">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="overflow-hidden whitespace-nowrap w-full bg-transparent py-4 relative">
   <div className="flex animate-scrollMarqueeL hover:[animation-play-state:paused]">
     <span className="text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
@@ -14,7 +14,7 @@ const Experience = () => {
     </span>
   </div>
 </div>
-        <div className="max-w-[900px] mx-auto my-8 flex flex-col gap-12">
+        <div className="max-w-[600px] mx-auto my-8 flex flex-col gap-12">
   <div className="experience-item">
     <h3 className="text-2xl font-Space_Grotesk mb-1.5">
       Lead Cinematographer — I.M. Vision Studio
