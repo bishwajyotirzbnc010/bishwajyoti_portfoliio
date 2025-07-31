@@ -1,33 +1,12 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+// tailwind.config.js
+module.exports = {
+  content: ['./src/**/*.{js,jsx,ts,tsx}'], // make sure your files are included
   theme: {
     extend: {
       fontFamily: {
-        Space_Grotesk: ['"Space Grotesk"', 'sans-serif'],
-      },
-      keyframes: {
-        scrollMarqueeL: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-      },
-      animation: {
-        scrollMarqueeL: 'scrollMarqueeR 30s linear infinite',
-      },
-      keyframes: {
-        scrollMarqueeR: {
-          '-0%': { transform: 'translateX(-05%)' },
-          '100%': { transform: 'translateX(0%)' },
-        },
-      },
-      animation: {
-        scrollMarqueeR: 'scrollMarqueeR 30s linear infinite',
+        spaceGrotesk: ['"Space Grotesk"', 'sans-serif'],
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require('tailwindcss-filters'),],
+};

@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer"
+import SkillSection from "./components/SkillSection";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <About />
       <Portfolio />
+      <SkillSection />
       <Experience />
       <Contact />
       <Footer />

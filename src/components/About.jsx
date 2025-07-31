@@ -38,12 +38,13 @@ const About = () => {
                       </motion.div>
                     </div>
             </div>
-        <div className="max-w-2xl mx-auto text-center">
-        <p className="text-lg text-white leading-relaxed">
-          I'm a passionate visual storyteller dedicated to capturing timeless moments through the lens. 
-          My work blends creativity, emotion, and narrative to craft experiences that resonate deeply.
-        </p>
-        </div>
+        <div className="text-center max-w-3xl mx-auto">
+    <p className="text-lg text-white leading-relaxed">
+      I'm a passionate visual storyteller committed to turning ideas into emotionally rich, visually striking experiences. Whether behind the camera capturing cinematic moments, designing compelling visuals, building immersive web experiences, or crafting content that resonates, I bring a multidimensional creative vision to every project.
+      <br /><br />
+      My background in cinematography, photography, graphic design, and web development allows me to approach storytelling from every angle — blending emotion, narrative, and design into a seamless brand experience. I don’t just create visuals; I build moments that connect, inspire, and last.
+    </p>
+  </div>
       </div>
     </section>
   );
