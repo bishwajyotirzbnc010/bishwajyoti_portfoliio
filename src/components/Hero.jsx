@@ -71,7 +71,7 @@ const Hero = () => {
 
       {/* Profile pic section */}
       <div className="flex justify-center">
-        <div className="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 rounded-3xl overflow-hidden">
+        <div className="w-3/4 sm:w-5/6 md:w-4/5 lg:w-4/5 rounded-3xl overflow-hidden">
           <img 
             src="/image/Profile_pic.png" 
             alt="Profile" 
