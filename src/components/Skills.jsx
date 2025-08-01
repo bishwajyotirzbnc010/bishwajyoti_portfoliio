@@ -61,7 +61,7 @@ const cardVariants = {
   }),
 };
 
-const SkillSection = () => (
+const Skills = () => (
   <section id="skills" className="relative py-20 px-6 sm:px-12 md:px-20 bg-gray-50 overflow-hidden">
     <div className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-40 blur-sm pointer-events-none"
       style={{ backgroundImage: "url('/image/abstract_grainy_bg.jpg')" }}
@@ -73,17 +73,17 @@ const SkillSection = () => (
                   variants={marqueeVariants}
                   animate="animate"
                 >
-                  <span className="text-black text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+                  <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
                     {marqueeText}
                   </span>
-                  <span className="text-black text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+                  <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
                     {marqueeText}
                   </span>
                 </motion.div>
               </div>
-      <p className="text-gray-600 max-w-3xl mx-auto">A creative balance of filmmaking, design, development, and storytelling—all shaped into clean, immersive experiences.</p>
+      <p className="text-gray-600 max-w-3xl mx-auto">From framing cinematic shots to crafting compelling visuals and coding seamless digital experiences—my work lives at the crossroads of art and technology. I blend storytelling, design thinking, and technical expertise to transform ideas into immersive content that connects, communicates, and captivates.</p>
     </div>
-    <div className="relative grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto z-10">
+    <div className="relative grid grid-cols gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto z-10">
   {skillData.map((group, i) => (
     <motion.div
       key={group.id}
@@ -123,4 +123,4 @@ const SkillSection = () => (
   </section>
 );
 
-export default SkillSection;
+export default Skills;

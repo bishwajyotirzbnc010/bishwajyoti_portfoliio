@@ -54,10 +54,10 @@ const Portfolio = () => {
               variants={marqueeVariantsReverse}
               animate="animate"
             >
-              <span className="text-black text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+              <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
                 {marqueeText}
               </span>
-              <span className="text-black text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+              <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
                 {marqueeText}
               </span>
             </motion.div>

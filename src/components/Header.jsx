@@ -14,6 +14,7 @@ const Header = () => {
     { to: 'skills', label: 'Skills' },   // Added Skills here
     { to: 'experience', label: 'Experience' },
     { to: 'contact', label: 'Contact' },
+    { to: 'blog', label: 'Blog' }
   ];
 
   return (
@@ -49,7 +50,7 @@ const Header = () => {
                     spy={true}
                     smooth={true}
                     duration={600}
-                    offset={-70}  // adjust offset for fixed header height
+                    offset={-70} 
                     onClick={() => setMenuOpen(false)}
                     className="cursor-pointer no-underline text-[#111] font-medium relative
                       after:content-[''] after:absolute after:bottom-[-5px] after:left-0
@@ -64,6 +65,8 @@ const Header = () => {
             ))}
           </ul>
         </nav>
+
+  
 
         {/* Mobile Hamburger Icon */}
         <div className="md:hidden">

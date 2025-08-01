@@ -3,19 +3,19 @@ import { motion, useInView } from 'framer-motion';
 
 const marqueeText = 'contact . contact . contact . contact . contact . contact .';
 
-const marqueeVariantsReverse = {
-  animate: {
-    x: ['-100%', '0%'],
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: 'loop',
-        duration: 10,
-        ease: 'linear',
+  const marqueeVariants = {
+    animate: {
+      x: ['0%', '-100%'],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: 'loop',
+          duration: 10,
+          ease: 'linear',
+        },
       },
     },
-  },
-};
+  };
 
 // Form container animation
 const formVariant = {
@@ -41,19 +41,20 @@ const Contact = () => {
 
         {/* Marquee Header */}
         <div className="overflow-hidden whitespace-nowrap w-full">
-          <motion.div
-            className="flex"
-            variants={marqueeVariantsReverse}
-            animate="animate"
-          >
-            <span className="text-black text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
-              {marqueeText}
-            </span>
-            <span className="text-black text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
-              {marqueeText}
-            </span>
-          </motion.div>
-        </div>
+                  <motion.div
+                    className="flex"
+                    variants={marqueeVariants}
+                    animate="animate"
+                  >
+                    <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+                      {marqueeText}
+                    </span>
+                    <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+                      {marqueeText}
+                    </span>
+                  </motion.div>
+                </div>
+        
 
         <p className="mb-10 text-gray-700">
           Let’s create something amazing together. Drop me a message!

@@ -3,52 +3,52 @@ import { motion } from 'framer-motion';
 
 const Experience = () => {
 
-  const marqueeText = 'Experience . Experience . Experience . Experience . Experience . Experience .';
+const marqueeText = 'Experience . Experience . Experience . Experience . Experience . Experience .';
 
-  const marqueeVariants = {
-    animate: {
-      x: ['0%', '-100%'],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: 'loop',
-          duration: 10,
-          ease: 'linear',
-        },
+const marqueeVariantsReverse = {
+  animate: {
+    x: ['-100%', '0%'],
+    transition: {
+      x: {
+        repeat: Infinity,
+        repeatType: 'loop',
+        duration: 10,
+        ease: 'linear',
       },
     },
-  };
+  },
+};
 
-  const popUpVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        type: "spring",
-        stiffness: 120,
-        damping: 12,
-      },
+const popUpVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 12,
     },
-  };
+  },
+};
 
   return (
     <section id="experience" className="px-6 py-20 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="overflow-hidden whitespace-nowrap w-full">
-          <motion.div
-            className="flex"
-            variants={marqueeVariants}
-            animate="animate"
-          >
-            <span className="text-black text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
-              {marqueeText}
-            </span>
-            <span className="text-black text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
-              {marqueeText}
-            </span>
-          </motion.div>
-        </div>
+                  <motion.div
+                    className="flex"
+                    variants={marqueeVariantsReverse}
+                    animate="animate"
+                  >
+                    <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+                      {marqueeText}
+                    </span>
+                    <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+                      {marqueeText}
+                    </span>
+                  </motion.div>
+                </div>
 
         <div className="max-w-[600px] mx-auto my-8 flex flex-col gap-12">
           <motion.div

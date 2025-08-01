@@ -35,7 +35,7 @@ const imageVariants = {
   },
 };
 
-const Hero = () => {
+const Home = () => {
   return (
     <>
     <section className="text-center px-6 py-30 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -144,4 +144,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

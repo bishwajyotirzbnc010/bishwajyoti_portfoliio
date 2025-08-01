@@ -5,20 +5,20 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer"
-import SkillSection from "./components/SkillSection";
+import Skills from "./components/Skills";
 
 function App() {
   return (
     <>
     <div >
       <Header />
-      <Hero />
+      <Home />
       <About />
       <Portfolio />
-      <SkillSection />
+      <Skills />
       <Experience />
       <Contact />
       <Footer />
