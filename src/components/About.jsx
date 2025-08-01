@@ -18,7 +18,7 @@ const marqueeVariants = {
 };
 const About = () => {
   return (
-    <section id="about" className="px-6 py-20 bg-black">
+    <section id="about" className="px-6 py-20 bg-black ">
       <div className="max-w-6xl mx-auto">
         
         <div className="overflow-hidden w-full bg-transparent py-4 relative space-y-8">

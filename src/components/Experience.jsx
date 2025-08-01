@@ -61,7 +61,7 @@ const Experience = () => {
             <h3 className="text-2xl font-Space_Grotesk mb-1.5">
               Lead Cinematographer — I.M. Vision Studio
             </h3>
-            <p className="text-sm text-gray-500 italic mb-4">
+            <p className="text-sm font-semibold text-gray-500 tracking-wider mb-4">
               Biratnagar, Nepal · Jan 2021 – Present
             </p>
             <p className="text-base leading-7 text-gray-800">
@@ -79,7 +79,7 @@ const Experience = () => {
             <h3 className="text-2xl font-Space_Grotesk mb-1.5">
               Freelance Filmmaker & Editor
             </h3>
-            <p className="text-sm text-gray-500 italic mb-4">
+            <p className="text-sm tracking-wider text-gray-500 font-semibold mb-4">
               Remote · Jun 2019 – Dec 2020
             </p>
             <p className="text-base leading-7 text-gray-800">
@@ -97,7 +97,7 @@ const Experience = () => {
             <h3 className="text-2xl font-Space_Grotesk mb-1.5">
               Content Creator — Local Event Studios
             </h3>
-            <p className="text-sm text-gray-500 italic mb-4">
+            <p className="text-sm text-gray-500 font-semibold tracking-wider mb-4">
               Biratnagar, Nepal · 2018 – 2019
             </p>
             <p className="text-base leading-7 text-gray-800">

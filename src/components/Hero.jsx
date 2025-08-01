@@ -37,7 +37,8 @@ const imageVariants = {
 
 const Hero = () => {
   return (
-    <section className="text-center px-6 py-20 bg-gray-50 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <>
+    <section className="text-center px-6 py-30 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
       {/* Animated Text Section */}
       <motion.div
@@ -45,7 +46,7 @@ const Hero = () => {
         variants={containerVariants}
         initial="hidden"
         animate="show"
-      >
+        >
         <motion.h1 className="text-5xl sm:text-7xl md:text-8xl font-bold" variants={itemVariants}>
           Visual Journey
         </motion.h1>
@@ -61,40 +62,40 @@ const Hero = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center rounded-full border bg-white hover:bg-black hover:text-white transition-colors -ml-3 first:ml-0"
-          >
-            yt
+            >
+           YT
           </a>
           <a 
             href="https://www.facebook.com/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center rounded-full border bg-white hover:bg-black hover:text-white transition-colors -ml-3"
-          >
-            fb
+            >
+            FB
           </a>
           <a 
             href="https://www.instagram.com/tobi_memo" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center rounded-full border bg-white hover:bg-black hover:text-white transition-colors -ml-3"
-          >
-            ig
+            >
+          IG
           </a>
           <a 
             href="https://x.com/Bishwajyoti_R3" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center rounded-full border bg-white hover:bg-black hover:text-white transition-colors -ml-3"
-          >
-            x
+            >
+            X
           </a>
           <a 
             href="https://www.linkedin.com/in/bishwajyoti-rajbanshi-1a4b322aa" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-12 h-12 flex items-center justify-center rounded-full border bg-white hover:bg-black hover:text-white transition-colors -ml-3"
-          >
-            ln
+            >
+           LN
           </a>
         </motion.div>
 
@@ -102,11 +103,11 @@ const Hero = () => {
 
         <motion.div className="flex flex-col sm:flex-row gap-8 mt-4" variants={itemVariants}>
           <div className="text-lg">
-            <span className="block text-3xl italic font-bold">+250k</span>
+            <span className="block text-3xl  font-bold">+250k</span>
             Videos reaching wide audiences
           </div>
           <div className="text-lg">
-            <span className="block text-3xl italic font-bold">+800k</span>
+            <span className="block text-3xl font-bold">+800k</span>
             Hours watched, cinematic impact
           </div>
         </motion.div>
@@ -118,7 +119,7 @@ const Hero = () => {
         variants={imageVariants}
         initial="hidden"
         animate="show"
-      >
+        >
         <div className="w-3/4 sm:w-5/6 md:w-4/5 lg:w-4/5 rounded-3xl overflow-hidden">
           <img 
             src="/image/Profile_pic.png" 
@@ -134,11 +135,12 @@ const Hero = () => {
               maskSize: "cover",
               maskPosition: "center",
             }}
-          />
+            />
         </div>
       </motion.div>
 
     </section>
+    </>
   );
 };
 

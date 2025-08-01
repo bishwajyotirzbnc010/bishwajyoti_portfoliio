@@ -13,6 +13,7 @@ import SkillSection from "./components/SkillSection";
 function App() {
   return (
     <>
+    <div >
       <Header />
       <Hero />
       <About />
@@ -21,6 +22,7 @@ function App() {
       <Experience />
       <Contact />
       <Footer />
+    </div>
     </>
   );
 }

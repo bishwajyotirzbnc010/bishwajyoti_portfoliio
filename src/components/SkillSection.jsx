@@ -9,7 +9,7 @@ import {
   FaCheckCircle,
 } from 'react-icons/fa';
 
-const marqueeText = 'skills . skills . skills . skills . skills . skills .';
+const marqueeText = 'Skills . Skills . Skills . Skills . Skills . Skills .';
 
 const marqueeVariants = {
   animate: {
@@ -83,7 +83,7 @@ const SkillSection = () => (
               </div>
       <p className="text-gray-600 max-w-3xl mx-auto">A creative balance of filmmaking, design, development, and storytelling—all shaped into clean, immersive experiences.</p>
     </div>
-    <div className="relative grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto z-10">
+    <div className="relative grid grid-cols-2 gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto z-10">
   {skillData.map((group, i) => (
     <motion.div
       key={group.id}
