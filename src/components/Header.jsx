@@ -1,72 +1,30 @@
 import React, { useState } from 'react';
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
-import { Link, animateScroll as scroll } from 'react-scroll'; 
+import { Link } from 'react-scroll';  // Use react-scroll Link
+import Navbar from './Navbar';
+import { navLinks } from '../data/navLinks';  // Import navLinks from the data
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
-  const navLinks = [
-    { to: 'home', label: 'Home' },
-    { to: 'about', label: 'About' },
-    { to: 'portfolio', label: 'Portfolio' },
-    { to: 'skills', label: 'Skills' },   // Added Skills here
-    { to: 'experience', label: 'Experience' },
-    { to: 'contact', label: 'Contact' },
-    { to: 'blog', label: 'Blog' }
-  ];
-
   return (
     <header className="fixed top-0 w-full z-50 bg-white shadow-md border-b">
       <div className="flex items-center justify-between px-6 py-4">
-        <div className="text-2xl font-light">tobi memo</div>
+        
+        {/* "tobi memo" text now wrapped with react-scroll Link */}
+        <Link 
+          to="home"  // This matches the id of your Home section
+          smooth={true}
+          duration={600}
+          offset={-70}  // Adjust offset if necessary
+          className="text-2xl font-light cursor-pointer"
+        >
+          tobi memo
+        </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:block">
-          <ul className="flex space-x-6 text-sm font-medium">
-            {navLinks.map((link) => (
-              <li key={link.label}>
-                {link.label === 'Home' ? (
-                  <span
-                    onClick={() => {
-                      scroll.scrollToTop({
-                        duration: 600,
-                        smooth: 'easeInOutQuad',
-                      });
-                      setMenuOpen(false);
-                    }}
-                    className="cursor-pointer no-underline text-[#111] font-medium relative
-                      after:content-[''] after:absolute after:bottom-[-5px] after:left-0
-                      after:h-[2px] after:w-full after:bg-black
-                      after:transition-transform after:duration-300 after:ease-in-out
-                      after:scale-x-0 hover:after:scale-x-100 after:origin-left"
-                  >
-                    {link.label}
-                  </span>
-                ) : (
-                  <Link
-                    to={link.to}
-                    spy={true}
-                    smooth={true}
-                    duration={600}
-                    offset={-70} 
-                    onClick={() => setMenuOpen(false)}
-                    className="cursor-pointer no-underline text-[#111] font-medium relative
-                      after:content-[''] after:absolute after:bottom-[-5px] after:left-0
-                      after:h-[2px] after:w-full after:bg-black
-                      after:transition-transform after:duration-300 after:ease-in-out
-                      after:scale-x-0 hover:after:scale-x-100 after:origin-left"
-                  >
-                    {link.label}
-                  </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-  
+        <Navbar /> {/* Desktop Navbar */}
 
         {/* Mobile Hamburger Icon */}
         <div className="md:hidden">
@@ -76,25 +34,28 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Navigation Menu */}
       {menuOpen && (
         <div className="md:hidden px-6 pb-4 bg-white shadow-md">
           <ul className="flex flex-col space-y-4 text-base font-medium">
             {navLinks.map((link) => (
               <li key={link.label}>
                 {link.label === 'Home' ? (
-                  <span
-                    onClick={() => {
-                      scroll.scrollToTop({
-                        duration: 600,
-                        smooth: 'easeInOutQuad',
-                      });
-                      setMenuOpen(false);
-                    }}
-                    className="block text-[#111] cursor-pointer"
+                  <Link
+                    to="home" // Link to Home section using react-scroll
+                    spy={true}
+                    smooth={true}
+                    duration={600}
+                    offset={-70}
+                    onClick={closeMenu}
+                    className="cursor-pointer no-underline text-[#111] font-medium relative
+                      after:content-[''] after:absolute after:bottom-[-5px] after:left-0
+                      after:h-[2px] after:w-full after:bg-black
+                      after:transition-transform after:duration-300 after:ease-in-out
+                      after:scale-x-0 hover:after:scale-x-100 after:origin-left"
                   >
                     {link.label}
-                  </span>
+                  </Link>
                 ) : (
                   <Link
                     to={link.to}
@@ -103,7 +64,11 @@ const Header = () => {
                     duration={600}
                     offset={-70}
                     onClick={closeMenu}
-                    className="block text-[#111] cursor-pointer"
+                    className="cursor-pointer no-underline text-[#111] font-medium relative
+                      after:content-[''] after:absolute after:bottom-[-5px] after:left-0
+                      after:h-[2px] after:w-full after:bg-black
+                      after:transition-transform after:duration-300 after:ease-in-out
+                      after:scale-x-0 hover:after:scale-x-100 after:origin-left"
                   >
                     {link.label}
                   </Link>

@@ -1,59 +1,35 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const Experience = () => {
+import { marqueeVariantsReverse } from '../functions/marqueeVariantsReverse';  // Importing the reversed marquee animation function
+import { popUpVariants } from '../functions/popUpVariants';  // Importing the pop-up animation function
 
 const marqueeText = 'Experience . Experience . Experience . Experience . Experience . Experience .';
 
-const marqueeVariantsReverse = {
-  animate: {
-    x: ['-100%', '0%'],
-    transition: {
-      x: {
-        repeat: Infinity,
-        repeatType: 'loop',
-        duration: 10,
-        ease: 'linear',
-      },
-    },
-  },
-};
-
-const popUpVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "spring",
-      stiffness: 120,
-      damping: 12,
-    },
-  },
-};
-
+const Experience = () => {
   return (
     <section id="experience" className="px-6 py-20 bg-white">
       <div className="max-w-6xl mx-auto">
+        {/* Marquee Animation */}
         <div className="overflow-hidden whitespace-nowrap w-full">
-                  <motion.div
-                    className="flex"
-                    variants={marqueeVariantsReverse}
-                    animate="animate"
-                  >
-                    <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
-                      {marqueeText}
-                    </span>
-                    <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
-                      {marqueeText}
-                    </span>
-                  </motion.div>
-                </div>
+          <motion.div
+            className="flex"
+            variants={marqueeVariantsReverse}  // Using the reverse marquee animation
+            animate="animate"
+          >
+            <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+              {marqueeText}
+            </span>
+            <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+              {marqueeText}
+            </span>
+          </motion.div>
+        </div>
 
+        {/* Experience Items */}
         <div className="max-w-[600px] mx-auto my-8 flex flex-col gap-12">
           <motion.div
             className="experience-item"
-            variants={popUpVariants}
+            variants={popUpVariants}  // Using the pop-up animation
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -71,7 +47,7 @@ const popUpVariants = {
 
           <motion.div
             className="experience-item"
-            variants={popUpVariants}
+            variants={popUpVariants}  // Using the pop-up animation
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -89,7 +65,7 @@ const popUpVariants = {
 
           <motion.div
             className="experience-item"
-            variants={popUpVariants}
+            variants={popUpVariants}  // Using the pop-up animation
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -105,7 +81,6 @@ const popUpVariants = {
             </p>
           </motion.div>
         </div>
-
       </div>
     </section>
   );

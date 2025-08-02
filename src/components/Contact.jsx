@@ -1,35 +1,9 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { marqueeVariantsForward } from '../functions/marqueeVariantsForward'; // ✅ Imported
+import { formVariant } from '../functions/formVariant'; // ✅ Imported
 
 const marqueeText = 'contact . contact . contact . contact . contact . contact .';
-
-  const marqueeVariants = {
-    animate: {
-      x: ['0%', '-100%'],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: 'loop',
-          duration: 10,
-          ease: 'linear',
-        },
-      },
-    },
-  };
-
-// Form container animation
-const formVariant = {
-  hidden: { opacity: 0, y: 80 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1.8, // slower
-      ease: [0.25, 1, 0.5, 1], // softer easing (similar to Apple’s website)
-    },
-  },
-};
-
 
 const Contact = () => {
   const ref = useRef(null);
@@ -41,20 +15,19 @@ const Contact = () => {
 
         {/* Marquee Header */}
         <div className="overflow-hidden whitespace-nowrap w-full">
-                  <motion.div
-                    className="flex"
-                    variants={marqueeVariants}
-                    animate="animate"
-                  >
-                    <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
-                      {marqueeText}
-                    </span>
-                    <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
-                      {marqueeText}
-                    </span>
-                  </motion.div>
-                </div>
-        
+          <motion.div
+            className="flex"
+            variants={marqueeVariantsForward} // ✅ Using imported variant
+            animate="animate"
+          >
+            <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+              {marqueeText}
+            </span>
+            <span className="text-black text-[4rem] md:text-[6rem] lg:text-[8rem] font-bold font-Space_Grotesk pr-16 whitespace-nowrap">
+              {marqueeText}
+            </span>
+          </motion.div>
+        </div>
 
         <p className="mb-10 text-gray-700">
           Let’s create something amazing together. Drop me a message!
@@ -63,7 +36,7 @@ const Contact = () => {
         {/* Animated Form Container */}
         <motion.div
           ref={ref}
-          variants={formVariant}
+          variants={formVariant} // ✅ Using imported variant
           initial="hidden"
           animate={isInView ? 'show' : 'hidden'}
           className="max-w-xl mx-auto text-center"

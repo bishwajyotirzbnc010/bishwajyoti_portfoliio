@@ -1,52 +1,19 @@
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { projects } from '../data/projects';  // Importing projects from data folder
+import { rowVariants, useScrollInView } from '../functions/scrollFunctions';  // Importing scroll-related functions
+import { marqueeVariantsReverse } from '../functions/marqueeVariantsReverse';  // Importing the reversed marquee animation function
 
 const Portfolio = () => {
-  const projects = [
-    { title: "", img: "/image/01.jpeg" },
-    { title: "", img: "/image/02.jpeg" },
-    { title: "", img: "/image/03.jpeg" },
-    { title: "", img: "/image/04.jpeg" },
-    { title: "", img: "/image/05.jpeg" },
-    { title: "", img: "/image/06.jpeg" },
-  ];
+  const ref = useRef(null);
+  const isInView = useScrollInView(ref);  // Scroll detection hook
 
   const marqueeText = 'portfolio . portfolio . portfolio . portfolio . portfolio . portfolio .';
-
-  const marqueeVariantsReverse = {
-    animate: {
-      x: ['-100%', '0%'],
-      transition: {
-        x: {
-          repeat: Infinity,
-          repeatType: 'loop',
-          duration: 10,
-          ease: 'linear',
-        },
-      },
-    },
-  };
-
-  const rowVariants = {
-    hidden: { opacity: 0, y: 60 },
-    show: (i = 0) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: i * 0.3,
-        ease: [0.22, 1, 0.36, 1],
-      },
-    }),
-  };
-
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
     <section id="portfolio" className="px-6 py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto text-center">
-        {/* Marquee */}
+        {/* Marquee - Reverse */}
         <div className="overflow-hidden whitespace-nowrap w-full bg-transparent py-4 relative">
           <div className="overflow-hidden whitespace-nowrap w-full">
             <motion.div
